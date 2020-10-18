@@ -1,7 +1,7 @@
 # vagrant-loadbalancer
-Creating a Centos cluster environment environment using Vagrant along with Virtualbox
+Creating a Centos cluster environment using Vagrant along with Virtualbox
 
-<p>This repository provides a template Vagrantfile to create a Centos cluster environment cluster with a Master Node and N Worker Nodes, using the VirtualBox hypervisor on your local machine.</p>
+<p>This repository provides a template Vagrantfile to create a Centos cluster environment with a Master Node and N Worker Nodes, using the VirtualBox hypervisor on your local machine.</p>
 
 ### <h2>Setup</h2>
 
@@ -47,27 +47,27 @@ The following table lists the configurable parameters of the [Vagrantfile](Vagra
 <tr>
 <td><code>vm_name_mn</code></td>
 <td>The Virtual Machine name for the KS8 Master Node in Virtualbox</td>
-<td><code>centos-ks8-mnode</code></td>
+<td><code>centos-lb-mnode</code></td>
 </tr>
 <tr>
 <td><code>vm_hostname_mn</code></td>
 <td>The server's hostname for the KS8 Master Node</td>
-<td><code>ks8-masternode</code></td>
+<td><code>lb-masternode</code></td>
 </tr>
 <tr>
 <td><code>vm_name_wn</code></td>
 <td>The Virtual Machine name for the KS8 Worker Nodes in Virtualbox</td>
-<td><code>centos-ks8-wnode</code></td>
+<td><code>centos-lb-wnode</code></td>
 </tr>
 <tr>
 <td><code>vm_hostname_wn</code></td>
 <td>The servers' hostname for the KS8 Worker Node</td>
-<td><code>ks8-workernode</code></td>
+<td><code>lb-workernode</code></td>
 </tr>
 <tr>
 <td><code>N</code></td>
 <td>Number of nodes worker nodes, TOTAL VMs: N+1</td>
-<td><code>2</code></td>
+<td><code>4</code></td>
 </tr>
 <td><code>vagrant_assets</code></td>
 <td>It is the directory where the VMs' bootstrap scripts are stored</td>
@@ -80,8 +80,8 @@ The following table lists the configurable parameters of the [Vagrantfile](Vagra
 </tr>
 <tr>
 <td><code>vm_net_ip</code></td>
-<td>The KS8 environment's private subnet. Virtualbox's type of network: "host-only"</td>
-<td><code>"192.168.100."</code></td>
+<td>The cluster environment's private subnet. Virtualbox's type of network: "host-only"</td>
+<td><code>"192.168.200."</code></td>
 </tr>
 </tbody>
 </table>
@@ -114,15 +114,15 @@ ssh -i ssh-key vagrant@<vm_net_ip>.1N
 <h3>Master node - Default net configuration</h3>
 
 ```
-ssh -i ssh-key vagrant@192.168.100.10
+ssh -i ssh-key vagrant@192.168.200.10
 ```
 
 <h3>Worker nodes - Default net configuration</h3>
 
 ```
-ssh -i ssh-key vagrant@192.168.100.11
-ssh -i ssh-key vagrant@192.168.100.12
-ssh -i ssh-key vagrant@192.168.100.1N
+ssh -i ssh-key vagrant@192.168.200.11
+ssh -i ssh-key vagrant@192.168.200.12
+ssh -i ssh-key vagrant@192.168.200.1N
 ```
 
 

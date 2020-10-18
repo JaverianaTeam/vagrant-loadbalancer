@@ -46,22 +46,22 @@ The following table lists the configurable parameters of the [Vagrantfile](Vagra
 </tr>
 <tr>
 <td><code>vm_name_mn</code></td>
-<td>The Virtual Machine name for the KS8 Master Node in Virtualbox</td>
+<td>The Virtual Machine name for the cluster Master Node in Virtualbox</td>
 <td><code>centos-lb-mnode</code></td>
 </tr>
 <tr>
 <td><code>vm_hostname_mn</code></td>
-<td>The server's hostname for the KS8 Master Node</td>
+<td>The server's hostname for the cluster Master Node</td>
 <td><code>lb-masternode</code></td>
 </tr>
 <tr>
 <td><code>vm_name_wn</code></td>
-<td>The Virtual Machine name for the KS8 Worker Nodes in Virtualbox</td>
+<td>The Virtual Machine name for the cluster Worker Nodes in Virtualbox</td>
 <td><code>centos-lb-wnode</code></td>
 </tr>
 <tr>
 <td><code>vm_hostname_wn</code></td>
-<td>The servers' hostname for the KS8 Worker Node</td>
+<td>The servers' hostname for the cluster Worker Node</td>
 <td><code>lb-workernode</code></td>
 </tr>
 <tr>

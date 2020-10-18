@@ -1,6 +1,5 @@
 # -*- mode: ruby -*-
 #
-# Vagrantfile - Byron Martinez - bdmartinezm22@gmail.com
 #
 
 
